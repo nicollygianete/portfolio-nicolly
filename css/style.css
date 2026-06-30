@@ -1,0 +1,630 @@
+/* ========================================
+   PORTFÓLIO - NICOLLY GIANETE
+   style.css — Estilos globais e variáveis
+   ======================================== */
+
+/* --- Variáveis CSS (tema escuro padrão) --- */
+:root {
+  --cor-fundo: #0f0f14;
+  --cor-fundo-card: #1a1a24;
+  --cor-fundo-menu: #12121aee;
+  --cor-destaque: #a78bfa;       /* lilás suave */
+  --cor-destaque-2: #7c3aed;     /* lilás mais escuro para gradientes */
+  --cor-texto: #e8e8f0;
+  --cor-texto-suave: #9090b0;
+  --cor-borda: #2e2e42;
+  --cor-hover: #a78bfa22;
+  --sombra: 0 4px 24px rgba(0,0,0,0.5);
+  --raio: 12px;
+  --transicao: 0.3s ease;
+}
+
+/* --- Tema claro (ativado via JS) --- */
+body.tema-claro {
+  --cor-fundo: #f4f4f8;
+  --cor-fundo-card: #ffffff;
+  --cor-fundo-menu: #ffffffee;
+  --cor-destaque: #7c3aed;
+  --cor-destaque-2: #a78bfa;
+  --cor-texto: #1a1a2e;
+  --cor-texto-suave: #5a5a7a;
+  --cor-borda: #dddde8;
+  --cor-hover: #7c3aed18;
+  --sombra: 0 4px 24px rgba(0,0,0,0.1);
+}
+
+/* --- Reset básico --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Base --- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  transition: background-color var(--transicao), color var(--transicao);
+}
+
+/* ========================================
+   MENU DE NAVEGAÇÃO
+   ======================================== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--cor-fundo-menu);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--cor-borda);
+  z-index: 1000;
+  transition: background-color var(--transicao);
+}
+
+/* Container interno do header */
+.header-interno {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+/* Logo/nome no menu */
+.logo-menu {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--cor-destaque);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+/* Lista de navegação */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 8px;
+}
+
+/* Links do menu */
+nav ul li a {
+  display: block;
+  color: var(--cor-texto-suave);
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: color var(--transicao), background-color var(--transicao);
+}
+
+/* Hover nos links */
+nav ul li a:hover,
+nav ul li a.ativo {
+  color: var(--cor-destaque);
+  background-color: var(--cor-hover);
+}
+
+/* Botão tema claro/escuro */
+#btn-tema {
+  background: none;
+  border: 1px solid var(--cor-borda);
+  color: var(--cor-texto-suave);
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all var(--transicao);
+  white-space: nowrap;
+}
+
+#btn-tema:hover {
+  border-color: var(--cor-destaque);
+  color: var(--cor-destaque);
+}
+
+/* Botão hamburger (mobile) */
+#btn-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+}
+
+#btn-menu span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--cor-texto);
+  border-radius: 2px;
+  transition: all var(--transicao);
+}
+
+/* ========================================
+   LAYOUT GERAL DAS PÁGINAS
+   ======================================== */
+
+/* Espaço para o header fixo */
+main {
+  padding-top: 64px;
+}
+
+/* Container central */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+
+/* Título da seção */
+.titulo-secao {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--cor-destaque);
+  margin-bottom: 8px;
+}
+
+/* Subtítulo / divisor */
+.linha-divisora {
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--cor-destaque), var(--cor-destaque-2));
+  border-radius: 2px;
+  margin-bottom: 40px;
+}
+
+/* ========================================
+   HERO (SEÇÃO INICIAL — SOBRE MIM)
+   ======================================== */
+.hero {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  padding: 64px 24px;
+}
+
+.hero-interno {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Saudação pequena */
+.hero-saudacao {
+  font-size: 1rem;
+  color: var(--cor-destaque);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+/* Nome principal */
+.hero-nome {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  color: var(--cor-texto);
+}
+
+/* Destaque no nome */
+.hero-nome span {
+  color: var(--cor-destaque);
+}
+
+/* Descrição */
+.hero-descricao {
+  font-size: 1.1rem;
+  color: var(--cor-texto-suave);
+  max-width: 540px;
+  margin-bottom: 32px;
+}
+
+/* Tags de hobbies */
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.tag {
+  background-color: var(--cor-fundo-card);
+  border: 1px solid var(--cor-borda);
+  color: var(--cor-texto-suave);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.88rem;
+  transition: all var(--transicao);
+}
+
+.tag:hover {
+  border-color: var(--cor-destaque);
+  color: var(--cor-destaque);
+}
+
+/* Botão CTA */
+.btn-primario {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--cor-destaque), var(--cor-destaque-2));
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: opacity var(--transicao), transform var(--transicao);
+}
+
+.btn-primario:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   CARDS GENÉRICOS
+   ======================================== */
+.card {
+  background-color: var(--cor-fundo-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 28px 32px;
+  margin-bottom: 20px;
+  box-shadow: var(--sombra);
+  transition: border-color var(--transicao), transform var(--transicao);
+}
+
+.card:hover {
+  border-color: var(--cor-destaque);
+  transform: translateY(-3px);
+}
+
+.card-titulo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--cor-texto);
+  margin-bottom: 6px;
+}
+
+.card-subtitulo {
+  font-size: 0.9rem;
+  color: var(--cor-destaque);
+  margin-bottom: 8px;
+}
+
+.card-texto {
+  font-size: 0.95rem;
+  color: var(--cor-texto-suave);
+}
+
+/* Badge de status */
+.badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.badge-concluido {
+  background-color: #16a34a22;
+  color: #4ade80;
+  border: 1px solid #4ade8044;
+}
+
+.badge-andamento {
+  background-color: var(--cor-hover);
+  color: var(--cor-destaque);
+  border: 1px solid var(--cor-destaque);
+}
+
+/* ========================================
+   FORMAÇÃO — GRID
+   ======================================== */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* ========================================
+   PORTFÓLIO — CARDS DE PROJETO
+   ======================================== */
+.card-projeto {
+  background-color: var(--cor-fundo-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 32px;
+  box-shadow: var(--sombra);
+  transition: border-color var(--transicao), transform var(--transicao);
+}
+
+.card-projeto:hover {
+  border-color: var(--cor-destaque);
+  transform: translateY(-4px);
+}
+
+.projeto-icone {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.projeto-titulo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--cor-texto);
+  margin-bottom: 10px;
+}
+
+.projeto-descricao {
+  font-size: 0.95rem;
+  color: var(--cor-texto-suave);
+  margin-bottom: 20px;
+}
+
+/* Link do projeto */
+.btn-projeto {
+  display: inline-block;
+  color: var(--cor-destaque);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid var(--cor-destaque);
+  padding: 8px 20px;
+  border-radius: 8px;
+  transition: all var(--transicao);
+}
+
+.btn-projeto:hover {
+  background-color: var(--cor-destaque);
+  color: #fff;
+}
+
+.btn-projeto.em-breve {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* ========================================
+   FORMULÁRIO DE CONTATO
+   ======================================== */
+.form-contato {
+  background-color: var(--cor-fundo-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 40px;
+  box-shadow: var(--sombra);
+}
+
+/* Grupos de campo */
+.form-grupo {
+  margin-bottom: 20px;
+}
+
+.form-grupo label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--cor-texto-suave);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* Inputs e textarea */
+.form-grupo input,
+.form-grupo textarea {
+  width: 100%;
+  background-color: var(--cor-fundo);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  color: var(--cor-texto);
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color var(--transicao);
+  outline: none;
+}
+
+.form-grupo input:focus,
+.form-grupo textarea:focus {
+  border-color: var(--cor-destaque);
+}
+
+/* Estado de erro */
+.form-grupo input.erro,
+.form-grupo textarea.erro {
+  border-color: #f87171;
+}
+
+.msg-erro {
+  font-size: 0.82rem;
+  color: #f87171;
+  margin-top: 5px;
+  display: none;
+}
+
+.form-grupo textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* Botão enviar */
+.btn-enviar {
+  width: 100%;
+  background: linear-gradient(135deg, var(--cor-destaque), var(--cor-destaque-2));
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity var(--transicao), transform var(--transicao);
+}
+
+.btn-enviar:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+}
+
+/* Modal de sucesso */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.ativo {
+  display: flex;
+}
+
+.modal-caixa {
+  background-color: var(--cor-fundo-card);
+  border: 1px solid var(--cor-destaque);
+  border-radius: var(--raio);
+  padding: 48px 40px;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  box-shadow: var(--sombra);
+}
+
+.modal-icone {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.modal-titulo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--cor-texto);
+  margin-bottom: 8px;
+}
+
+.modal-texto {
+  color: var(--cor-texto-suave);
+  margin-bottom: 24px;
+}
+
+.btn-fechar-modal {
+  background: linear-gradient(135deg, var(--cor-destaque), var(--cor-destaque-2));
+  color: #fff;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: opacity var(--transicao);
+}
+
+.btn-fechar-modal:hover {
+  opacity: 0.85;
+}
+
+/* ========================================
+   RODAPÉ
+   ======================================== */
+footer {
+  border-top: 1px solid var(--cor-borda);
+  text-align: center;
+  padding: 32px 24px;
+  color: var(--cor-texto-suave);
+  font-size: 0.88rem;
+}
+
+footer a {
+  color: var(--cor-destaque);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   RESPONSIVIDADE — MEDIA QUERIES
+   ======================================== */
+
+/* Tablet e menores */
+@media screen and (max-width: 768px) {
+
+  /* Menu hamburger aparece */
+  #btn-menu {
+    display: flex;
+  }
+
+  /* Nav some por padrão no mobile */
+  nav {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-fundo-menu);
+    border-bottom: 1px solid var(--cor-borda);
+    padding: 16px 0;
+  }
+
+  /* Nav visível quando aberto */
+  nav.aberto {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  nav ul li a {
+    padding: 14px 24px;
+    border-radius: 0;
+  }
+
+  /* Grid de formação vira 1 coluna */
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Form com menos padding */
+  .form-contato {
+    padding: 28px 20px;
+  }
+
+  /* Hero com font menor */
+  .hero-nome {
+    font-size: 2.2rem;
+  }
+}
+
+/* Celular pequeno */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 48px 16px;
+  }
+
+  .card {
+    padding: 20px 18px;
+  }
+
+  .titulo-secao {
+    font-size: 1.6rem;
+  }
+}
