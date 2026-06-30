@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <!-- Responsividade em dispositivos móveis -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicolly Gianete | Portfólio</title>
+  <!-- Folha de estilos externa -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================
+       CABEÇALHO COM MENU DE NAVEGAÇÃO
+       Mesmo menu em todas as páginas
+       ======================================== -->
+  <header>
+    <div class="header-interno">
+
+      <a href="sobre.html" class="logo-menu">NG</a>
+
+      <!-- Botão hamburger (mobile) -->
+      <button id="btn-menu" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav>
+        <ul>
+          <li><a href="sobre.html">Sobre mim</a></li>
+          <li><a href="formacao.html">Formação</a></li>
+          <li><a href="portfolio.html">Portfólio</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button id="btn-tema">🌙 Escuro</button>
+
+    </div>
+  </header>
+
+  <!-- ========================================
+       CONTEÚDO PRINCIPAL — PORTFÓLIO
+       ======================================== -->
+  <main>
+    <div class="container">
+
+      <h1 class="titulo-secao">Portfólio</h1>
+      <div class="linha-divisora"></div>
+
+      <p style="color: var(--cor-texto-suave); margin-bottom: 40px; font-size: 0.95rem;">
+        Projetos que desenvolvi ou nos quais participei. Cada um representa 
+        uma experiência de aprendizado e resolução de problemas reais.
+      </p>
+
+      <!-- ----------------------------------------
+           PROJETO 1: CARTEIRINHA DE HABILITAÇÃO DIGITAL
+           ---------------------------------------- -->
+      <div class="card-projeto">
+
+        <!-- Ícone representativo do projeto -->
+        <div class="projeto-icone">🪪</div>
+
+        <h2 class="projeto-titulo">Carteirinha de Habilitação Digital</h2>
+
+        <p class="projeto-descricao">
+          Um pequeno sistema que centraliza todas as informações de segurança 
+          necessárias para que um colaborador exerça sua função com segurança 
+          e confiança. A ideia é conectar dados relevantes de forma clara e 
+          acessível, garantindo que os requisitos de segurança estejam sempre 
+          à mão de quem precisa.
+        </p>
+
+        <!-- Link do projeto — substituir o href quando tiver o link -->
+        <a href="#" class="btn-projeto em-breve" aria-disabled="true">
+          🔗 Link em breve
+        </a>
+
+      </div>
+
+      <!-- ----------------------------------------
+           CARD CONVITE — Para projetos futuros
+           ---------------------------------------- -->
+      <div class="card" style="text-align: center; padding: 40px; margin-top: 8px;">
+        <p style="font-size: 1.5rem; margin-bottom: 12px;">✨</p>
+        <p class="card-titulo">Mais projetos em construção</p>
+        <br>
+        <p class="card-texto">
+          Estou no 3° semestre de ADS e novos projetos estão por vir. 
+          Fique à vontade para entrar em contato!
+        </p>
+        <br>
+        <a href="contato.html" class="btn-primario">Entrar em contato</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ========================================
+       RODAPÉ
+       ======================================== -->
+  <footer>
+    <p>Feito com HTML, CSS e JavaScript por <strong>Nicolly Gianete</strong> — 2025</p>
+  </footer>
+
+  <!-- Script principal (menu + tema) -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

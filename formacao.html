@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <!-- Responsividade em dispositivos móveis -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicolly Gianete | Formação</title>
+  <!-- Folha de estilos externa -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================
+       CABEÇALHO COM MENU DE NAVEGAÇÃO
+       Mesmo menu em todas as páginas
+       ======================================== -->
+  <header>
+    <div class="header-interno">
+
+      <a href="sobre.html" class="logo-menu">NG</a>
+
+      <!-- Botão hamburger (mobile) -->
+      <button id="btn-menu" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav>
+        <ul>
+          <li><a href="sobre.html">Sobre mim</a></li>
+          <li><a href="formacao.html">Formação</a></li>
+          <li><a href="portfolio.html">Portfólio</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button id="btn-tema">🌙 Escuro</button>
+
+    </div>
+  </header>
+
+  <!-- ========================================
+       CONTEÚDO PRINCIPAL — FORMAÇÃO
+       ======================================== -->
+  <main>
+    <div class="container">
+
+      <h1 class="titulo-secao">Formação</h1>
+      <div class="linha-divisora"></div>
+
+      <!-- ----------------------------------------
+           EDUCAÇÃO FORMAL
+           ---------------------------------------- -->
+      <h2 style="color: var(--cor-texto-suave); font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px;">
+        Educação
+      </h2>
+
+      <!-- Card: Ensino Superior -->
+      <div class="card">
+        <p class="card-subtitulo">🎓 Ensino Superior</p>
+        <p class="card-titulo">Análise e Desenvolvimento de Sistemas</p>
+        <p class="card-texto">UNINTER — Centro Universitário Internacional</p>
+        <p class="card-texto">3° semestre</p>
+        <span class="badge badge-andamento">Em andamento</span>
+      </div>
+
+      <!-- Card: Ensino Médio + Técnico -->
+      <div class="card">
+        <p class="card-subtitulo">📋 Ensino Médio + Técnico</p>
+        <p class="card-titulo">Técnico em Administração</p>
+        <p class="card-texto">FAETEC — Fundação de Apoio à Escola Técnica</p>
+        <span class="badge badge-concluido">Concluído</span>
+      </div>
+
+      <!-- ----------------------------------------
+           CURSOS COMPLEMENTARES
+           ---------------------------------------- -->
+      <h2 style="color: var(--cor-texto-suave); font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; margin: 40px 0 16px;">
+        Cursos complementares
+      </h2>
+
+      <!-- Grid de 2 colunas para os cursos menores -->
+      <div class="grid-2">
+
+        <!-- Card: Inteligência Emocional -->
+        <div class="card">
+          <p class="card-subtitulo">🧠 Microlins</p>
+          <p class="card-titulo">Inteligência Emocional</p>
+          <span class="badge badge-concluido">Concluído</span>
+        </div>
+
+        <!-- Card: Informática -->
+        <div class="card">
+          <p class="card-subtitulo">💻 Microlins</p>
+          <p class="card-titulo">Informática Básica + Pacote Office</p>
+          <span class="badge badge-concluido">Concluído</span>
+        </div>
+
+      </div>
+
+      <!-- ----------------------------------------
+           IDIOMAS
+           ---------------------------------------- -->
+      <h2 style="color: var(--cor-texto-suave); font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; margin: 40px 0 16px;">
+        Idiomas
+      </h2>
+
+      <!-- Card: Inglês -->
+      <div class="card">
+        <p class="card-subtitulo">🌐 Inglês</p>
+        <p class="card-titulo">Intermediário para Avançado</p>
+        <p class="card-texto">Estudo independente</p>
+        <span class="badge badge-andamento">Em progresso</span>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ========================================
+       RODAPÉ
+       ======================================== -->
+  <footer>
+    <p>Feito com HTML, CSS e JavaScript por <strong>Nicolly Gianete</strong> — 2025</p>
+  </footer>
+
+  <!-- Script principal (menu + tema) -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

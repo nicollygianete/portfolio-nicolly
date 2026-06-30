@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <!-- Responsividade em dispositivos móveis -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicolly Gianete | Contato</title>
+  <!-- Folha de estilos externa -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================
+       CABEÇALHO COM MENU DE NAVEGAÇÃO
+       Mesmo menu em todas as páginas
+       ======================================== -->
+  <header>
+    <div class="header-interno">
+
+      <a href="sobre.html" class="logo-menu">NG</a>
+
+      <!-- Botão hamburger (mobile) -->
+      <button id="btn-menu" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav>
+        <ul>
+          <li><a href="sobre.html">Sobre mim</a></li>
+          <li><a href="formacao.html">Formação</a></li>
+          <li><a href="portfolio.html">Portfólio</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button id="btn-tema">🌙 Escuro</button>
+
+    </div>
+  </header>
+
+  <!-- ========================================
+       CONTEÚDO PRINCIPAL — CONTATO
+       ======================================== -->
+  <main>
+    <div class="container">
+
+      <h1 class="titulo-secao">Contato</h1>
+      <div class="linha-divisora"></div>
+
+      <p style="color: var(--cor-texto-suave); margin-bottom: 40px; font-size: 0.95rem;">
+        Tem alguma ideia, projeto ou apenas quer trocar uma ideia? 
+        Me manda uma mensagem!
+      </p>
+
+      <!-- ----------------------------------------
+           FORMULÁRIO DE CONTATO
+           Validação feita em JavaScript (contato.js)
+           ---------------------------------------- -->
+      <div class="form-contato">
+
+        <!-- O atributo action está vazio pois o envio é simulado por JS -->
+        <form id="form-contato" novalidate>
+
+          <!-- Campo: Nome -->
+          <div class="form-grupo">
+            <label for="campo-nome">Nome *</label>
+            <input
+              type="text"
+              id="campo-nome"
+              name="nome"
+              placeholder="Seu nome completo"
+              autocomplete="name"
+            >
+            <!-- Mensagem de erro — exibida via JS se inválido -->
+            <span class="msg-erro" id="erro-nome"></span>
+          </div>
+
+          <!-- Campo: E-mail -->
+          <div class="form-grupo">
+            <label for="campo-email">E-mail *</label>
+            <input
+              type="email"
+              id="campo-email"
+              name="email"
+              placeholder="seu@email.com"
+              autocomplete="email"
+            >
+            <!-- Mensagem de erro — exibida via JS se inválido -->
+            <span class="msg-erro" id="erro-email"></span>
+          </div>
+
+          <!-- Campo: Mensagem -->
+          <div class="form-grupo">
+            <label for="campo-mensagem">Mensagem *</label>
+            <textarea
+              id="campo-mensagem"
+              name="mensagem"
+              placeholder="Escreva sua mensagem aqui..."
+            ></textarea>
+            <!-- Mensagem de erro — exibida via JS se inválido -->
+            <span class="msg-erro" id="erro-mensagem"></span>
+          </div>
+
+          <!-- Botão de envio -->
+          <button type="submit" class="btn-enviar">Enviar mensagem</button>
+
+        </form>
+      </div>
+
+      <!-- Informação de e-mail direto -->
+      <div class="card" style="margin-top: 20px; text-align: center;">
+        <p class="card-texto">
+          Ou se preferir, me envie um e-mail diretamente:
+          <br><br>
+          <a href="mailto:nicollygianete20@gmail.com" style="color: var(--cor-destaque); text-decoration: none; font-weight: 600;">
+            nicollygianete20@gmail.com
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ========================================
+       MODAL DE CONFIRMAÇÃO DE ENVIO
+       Exibido pelo JavaScript após envio válido
+       ======================================== -->
+  <div class="modal-overlay" id="modal-sucesso" role="dialog" aria-modal="true">
+    <div class="modal-caixa">
+      <div class="modal-icone">✅</div>
+      <h2 class="modal-titulo">Mensagem enviada!</h2>
+      <p class="modal-texto">
+        Obrigada pelo contato. Responderei assim que possível!
+      </p>
+      <button class="btn-fechar-modal" id="btn-fechar-modal">Fechar</button>
+    </div>
+  </div>
+
+  <!-- ========================================
+       RODAPÉ
+       ======================================== -->
+  <footer>
+    <p>Feito com HTML, CSS e JavaScript por <strong>Nicolly Gianete</strong> — 2025</p>
+  </footer>
+
+  <!-- Script principal (menu + tema) -->
+  <script src="js/main.js"></script>
+  <!-- Script específico desta página: validação do formulário -->
+  <script src="js/contato.js"></script>
+
+</body>
+</html>

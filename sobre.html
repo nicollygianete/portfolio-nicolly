@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <!-- Garante responsividade em dispositivos móveis -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicolly Gianete | Sobre mim</title>
+  <!-- Folha de estilos externa -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================
+       CABEÇALHO COM MENU DE NAVEGAÇÃO
+       Fixo no topo, visível em todas as páginas
+       ======================================== -->
+  <header>
+    <div class="header-interno">
+
+      <!-- Logo / nome abreviado -->
+      <a href="sobre.html" class="logo-menu">NG</a>
+
+      <!-- Botão hamburger (visível só no mobile via CSS) -->
+      <button id="btn-menu" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Menu de navegação principal -->
+      <nav>
+        <ul>
+          <li><a href="sobre.html">Sobre mim</a></li>
+          <li><a href="formacao.html">Formação</a></li>
+          <li><a href="portfolio.html">Portfólio</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+
+      <!-- Botão para alternar tema claro/escuro -->
+      <button id="btn-tema">🌙 Escuro</button>
+
+    </div>
+  </header>
+
+  <!-- ========================================
+       CONTEÚDO PRINCIPAL — SOBRE MIM
+       ======================================== -->
+  <main>
+
+    <!-- Seção hero: apresentação pessoal -->
+    <section class="hero">
+      <div class="hero-interno">
+
+        <!-- Saudação -->
+        <p class="hero-saudacao">Olá, eu sou</p>
+
+        <!-- Nome em destaque -->
+        <h1 class="hero-nome">
+          Nicolly <span>Gianete</span>
+        </h1>
+
+        <!-- Descrição breve -->
+        <p class="hero-descricao">
+          Estudante de Análise e Desenvolvimento de Sistemas, 3° semestre.
+          Sou criativa e curiosa — gosto de entender os mecanismos por trás de sistemas
+          e encontrar soluções que façam sentido para as pessoas.
+        </p>
+
+        <!-- Hobbies em formato de tags -->
+        <div class="hero-tags">
+          <span class="tag">📚 Leitura</span>
+          <span class="tag">🏃 Corrida</span>
+          <span class="tag">🎵 Música</span>
+          <span class="tag">✍️ Escrita</span>
+          <span class="tag">🎨 Desenho & Pintura</span>
+          <span class="tag">🧩 Quebra-cabeça</span>
+        </div>
+
+        <!-- Botão para ir ao contato -->
+        <a href="contato.html" class="btn-primario">Entre em contato</a>
+
+      </div>
+    </section>
+
+    <!-- Seção extra: um pouco mais sobre -->
+    <section>
+      <div class="container">
+        <h2 class="titulo-secao">Sobre mim</h2>
+        <div class="linha-divisora"></div>
+
+        <!-- Card de apresentação pessoal -->
+        <div class="card">
+          <p class="card-titulo">Quem sou eu</p>
+          <br>
+          <p class="card-texto">
+            Tenho uma mente analítica que se combina bem com o lado criativo — 
+            o que me atrai na área de tecnologia é justamente essa interseção entre
+            lógica e criatividade. Quando não estou estudando, é provável que eu 
+            esteja lendo, ouvindo música, cantando, tocando algum instrumento, 
+            correndo, desenhando ou montando um quebra-cabeça.
+          </p>
+          <br>
+          <p class="card-texto">
+            Tenho formação técnica em Administração e um histórico de cursos 
+            complementares em informática e desenvolvimento pessoal, o que me dá 
+            uma visão ampla tanto do lado técnico quanto do humano dos projetos.
+          </p>
+        </div>
+
+        <!-- Card de contato rápido -->
+        <div class="card">
+          <p class="card-titulo">Contato rápido</p>
+          <br>
+          <p class="card-texto">📧 nicollygianete20@gmail.com</p>
+          <br>
+          <a href="contato.html" class="btn-primario">Enviar mensagem</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================
+       RODAPÉ
+       ======================================== -->
+  <footer>
+    <p>Feito com HTML, CSS e JavaScript por <strong>Nicolly Gianete</strong> — 2025</p>
+  </footer>
+
+  <!-- Script principal (menu + tema) -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
