@@ -4,8 +4,8 @@
 // ========================================
 
 // ----------------------------------------
-// MENU RESPONSIVO (hamburger)
-// Abre e fecha o menu em telas pequenas
+// MENU RESPONSIVO
+// Abre e fecja o menu em telas pequenas
 // ----------------------------------------
 const btnMenu = document.getElementById('btn-menu');
 const nav = document.querySelector('nav');
@@ -36,10 +36,10 @@ function aplicarTema() {
   const temaSalvo = localStorage.getItem('tema');
   if (temaSalvo === 'claro') {
     document.body.classList.add('tema-claro');
-    if (btnTema) btnTema.textContent = '☀️ Claro';
+    if (btnTema) btnTema.textContent = 'Claro';
   } else {
     document.body.classList.remove('tema-claro');
-    if (btnTema) btnTema.textContent = '🌙 Escuro';
+    if (btnTema) btnTema.textContent = 'Escuro';
   }
 }
 
@@ -49,10 +49,10 @@ if (btnTema) {
     const estaClaro = document.body.classList.toggle('tema-claro');
     if (estaClaro) {
       localStorage.setItem('tema', 'claro');
-      btnTema.textContent = '☀️ Claro';
+      btnTema.textContent = 'Claro';
     } else {
       localStorage.setItem('tema', 'escuro');
-      btnTema.textContent = '🌙 Escuro';
+      btnTema.textContent = 'Escuro';
     }
   });
 }
