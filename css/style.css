@@ -1,15 +1,13 @@
-/* ========================================
-   PORTFÓLIO - NICOLLY GIANETE
-   style.css — Estilos globais e variáveis
-   ======================================== */
+/* --- PORTFÓLIO - NICOLLY GIANETE
+   style.css — Estilos globais e variáveis --- */
 
 /* --- Variáveis CSS (tema escuro padrão) --- */
 :root {
   --cor-fundo: #0f0f14;
   --cor-fundo-card: #1a1a24;
   --cor-fundo-menu: #12121aee;
-  --cor-destaque: #a78bfa;       /* lilás suave */
-  --cor-destaque-2: #7c3aed;     /* lilás mais escuro para gradientes */
+  --cor-destaque: rgb(248, 113, 113);
+  --cor-destaque-2: rgb(220, 38, 38);
   --cor-texto: #e8e8f0;
   --cor-texto-suave: #9090b0;
   --cor-borda: #2e2e42;
@@ -24,8 +22,8 @@ body.tema-claro {
   --cor-fundo: #f4f4f8;
   --cor-fundo-card: #ffffff;
   --cor-fundo-menu: #ffffffee;
-  --cor-destaque: #7c3aed;
-  --cor-destaque-2: #a78bfa;
+  --cor-destaque: rgb(248, 113, 113);
+  --cor-destaque-2: rgb(220, 38, 38);
   --cor-texto: #1a1a2e;
   --cor-texto-suave: #5a5a7a;
   --cor-borda: #dddde8;
